@@ -6,8 +6,8 @@ import tests.Constants;
 public class UserRequests {
     public static Response getSingleUser(String id){
         return RestAssured.given().log().all()
-                .get(Constants.baseURL + Constants.userEndPoint + id)
-                .then().extract().response();
+                .get(Constants.baseURL + Constants.userEndPoint + id);
+
     }
 
     public static Response deleteUser(String id){
